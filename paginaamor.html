@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para o Ser Mais Especial</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.heart-button {
+  color: red;
+  font-size: 20rem;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+
+.heart-button span {
+  display: block;
+  font-size: 1.2rem;
+  color: #000000;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+#loveCard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  display: none;
+}
+
+.card-poem {
+  background: #fff0f6;
+  color: #fff;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  max-width: 500px;
+  text-align: center;
+}
+
+#poemaConteiner{
+    max-height: 80vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+#poemaConteiner::-webkit-scrollbar{
+    width: 8px;
+}
+
+#poemaConteiner{
+    background: #962d6a;
+    border-radius: 20px;
+}
+
+img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 40px;
+}
+  </style>
+</head>
+<body>  
+    <div class="text-center" onclick="showLoveCard()">
+    <div class="heart-button">
+      <i class="bi bi-heart-fill">
+      </i>
+      <span>Para o ser mais especial do mundo ❤<br>Clique aqui!</span>
+    </div>
+  </div>  
+  <div id="loveCard">
+    <div id="poemaConteiner" class="card-poem">
+        <div class="d-flex align-items-center justify-content-center mb-4">
+            <img src="./niver.jpg" alt="">
+        </div>
+      <h3>Um ano, Uma eternidade em Nós ❤</h3>
+      <p>
+        Desde que você entrou na minha vida, tudo ganhou cor, sentido e paz. <br>
+        Seu sorriso ilumina meus dias, seu amor aquece meu coração. <br>
+        Essa página é pouco para expressar o quanto você é importante pra mim, <br>
+        mas é feita com todo o carinho do mundo. <br><br>
+        Te amo mais do que palavras podem dizer.
+        Hoje celebramos mais do que uma data. Celebramos cada olhar que nos reconstruiu no silêncio, cada palavra que nos uniu no meio do caos, cada abraço que foi abrigo quando o mundo parecia desabar.<br><br>
+
+        Amar você é como respirar poesia sem precisar entender todos os versos. É encontrar paz no som da sua voz, abrigo no seu sorriso, e infinito no seu olhar. Não é só sobre os dias felizes — é sobre ter você até nos dias nublados, e mesmo assim, ver o sol.<br><br>
+
+        Um ano se passou, mas parece que foi ontem que tudo começou… E, ao mesmo tempo, parece que sempre existimos um no outro, em algum lugar entre o destino e o querer. Porque amar você é viver fora do tempo, é colecionar instantes eternos em cada gesto simples.<br><br>
+
+        Obrigado por ser meu refúgio, minha certeza, minha melhor parte. Que venham mais anos, mais capítulos, mais memórias. Porque enquanto o tempo passar, eu quero passar com você.<br><br>
+
+        E mesmo quando a distância aperta, é o amor que nos mantém próximos — como se cada batida do meu coração chamasse pelo seu nome. Em cada noite em que não posso te abraçar, fecho os olhos e te encontro no pensamento… porque você mora em mim de um jeito que nem o tempo, nem a ausência, conseguem apagar.<br><br>
+
+        Nosso amor é feito de cumplicidade, de risos divididos e lágrimas enxugadas com carinho. É feito de escolhas diárias, de mãos dadas em silêncio, de planos sussurrados antes de dormir. E mesmo que o mundo todo tentasse explicar o que sentimos, ainda faltariam palavras. Porque o que temos é raro. É verdadeiro. É nosso.<br><br>
+
+        Hoje, olhando para tudo que construímos até aqui, só consigo agradecer. Por cada instante em que me fez sentir amado, por cada vez que acreditou em nós, por cada momento que transformou o comum em extraordinário. Você é meu lar, minha poesia viva, o motivo de todos os meus suspiros.<br><br>
+
+        Que esse seja apenas mais um dos muitos aniversários que vamos celebrar juntos. Porque enquanto eu respirar, vou amar você. E quando as palavras não bastarem, que meu silêncio te diga o que há de mais sincero:<br>
+        <strong>você é tudo.</strong><br><br>
+
+        E quando me perguntarem o que é amor,<br>
+        vou lembrar de ti — e sorrir.<br>
+        Feliz nosso dia, amor.<br>
+        Te amo infinitamente.<br><br>
+
+        <em>Teu para sempre,<br>
+        - Edvandro EHS</em>
+      </p>
+      <button class="btn btn-outline-danger mt-3" onclick="closeLoveCard()">Fechar</button>
+    </div>
+  </div>  <script>
+    function showLoveCard() {
+      document.getElementById('loveCard').style.display = 'flex';
+    }
+
+    function closeLoveCard() {
+      document.getElementById('loveCard').style.display = 'none';
+    }
+  </script>
+  </body>
+</html>
